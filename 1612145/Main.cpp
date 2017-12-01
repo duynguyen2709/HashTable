@@ -19,6 +19,7 @@ void BuildHashTable(HashTable *&hashTable)
 		auto colonPos = str.find_first_of(':');
 
 		string eng = str.substr(0, colonPos);
+		transform(eng.begin(), eng.end(), eng.begin(), ::tolower);
 
 		string viet = str.substr(colonPos + 1);
 
